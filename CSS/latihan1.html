@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active-nav">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>
+        <div class="typing-effect" id="home">
+          <p>Welcome To My Homepage</p>
+        </div>
+      </h1>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Biografi')">
+          Biografi
+        </button>
+      </div>
+
+      <div id="Biografi" class="tabcontent">
+        <div class="content-hero">
+          <p>
+            <br />
+            Hallo! Saya Tirta Samara, seorang mahasiswa semester 6 yang memiliki
+            rasa penasaran tinggi terhadap sesuatu yang dapat membuat saya
+            tertarik. Saya berkuliah di salah satu kampus swasta daerah Bandung
+            . Nama kampus saya yaitu Universitas Komputer Indonesia. Saya
+            berkuliah mengambil program studi Teknik Informatika.
+          </p>
+          <p>
+            Sebelumnya, saya lahir di Bogor pada hari Senin tanggal 8 Oktober
+            2001. Dalam keluarga, saya merupakan anak laki-laki satu-satunya.
+            Jadi, saya harap agar tidak heran apabila saya tidak seperti anak
+            laki-laki kebanyakan dalam segi sikap maupun yang lainnya. Sekedar
+            informasi, saya lebih mudah memahami dan berteman dengan anak laki
+            daripada anak laki-laki.
+
+            <i>Don't judge me!</i>
+          </p>
+          <p class="p3">
+            Saya memiliki sebuah impian terbesar dalam hidup saya yaitu dapat
+            memberangkatkan orangtua saya ke tanah suci Mekkah. Saya memiliki
+            cita-cita yaitu sebagai dosen dan programmer handal yang dapat
+            bermanfaat bagi orang lain. Saya memiliki kebiasaan jika saat gabut
+            maka saya akan mencari pelampiasan seperti editting video, menulis,
+            dan membuat project yang melintas di pikiran saya atau menyibukkan
+            diri dengan hal positif lain. Hal tersebut juga yang akan dijadikan
+            sebagai pelampiasan saat mental saya sedang down.
+          </p>
+        </div>
+      </div>
+
+      <fieldset id="about-us">
+        <legend>Tentang Saya</legend>
+        <div class="card">
+          <h3>Pendidikan</h3>
+          <ul>
+            <li>SMKN 3 BOGOR</li>
+            <li>
+              Universitas Komputer Indonesia
+              <ol>
+                <li>Semester 1</li>
+                <li>Semester 2</li>
+                <li>Semester 3</li>
+                <li>Semester 4</li>
+                <li>Semester 5</li>
+                <li>Semester 6</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Hobby</h3>
+          <ul class="hobby">
+            <li>Editting</li>
+            <li>Membaca</li>
+            <li>Menulis</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Favorite Menu</h3>
+          <ul>
+            <li>
+              Makanan
+              <ol class="menu">
+                <li>Segala macam mie</li>
+                <li>Siomay</li>
+                <li>Spagetti</li>
+                <li>Seblak</li>
+                <li>Kebab</li>
+              </ol>
+            </li>
+            <li>
+              Minuman
+              <ol>
+                <li>Coca-cola</li>
+                <li>Jus Alpukat</li>
+                <li>Jus Mangga</li>
+                <li>Teh Manis Hangat</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Tirta Samara</p>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("Biografi").style.display = "block";
+        document.querySelector(".tablinks").classList.add("active");
+      });
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.classList.add("active");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.forEach(function (navLink) {
+              navLink.classList.remove("active-nav");
+            });
+
+            link.classList.add("active-nav");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
